@@ -37,3 +37,11 @@ constant factors.
 Describe your reasoning and the conclusion you've come to. Your reasoning is
 most important -- you can easily find the answer, but you need to demonstrate
 that you've understood the concept. Add your answer to this markdown file.
+
+To analyze this, first I organized the algorithm into steps. and analyzed it for the worst case
+1. The first element of the array is sorted. This takes no operations
+2. Compare the next value of the array with all values left of it until you find where it belongs.
+Then swap it there. This will be n-1 comaparisons, and 1 swap operation, for a total of n operations in the worst case.
+3. Repeat step 2 until there are no more values in the array. This means step 2 will be repeated n-1 times, one for each element except the first. This is true for all cases, as all elements will need to be processed.
+
+Now, the average case would be where the number of places any given element needs to move is half of the elements within the sorted array, so it would be ((n-1)/2)+1 operations. Since for all cases all elements in the array need to be processed, the n-1 cases will be applicable in the average case. This leaves us at (((n-1)/2)+1)(n-1), which is an element of $\Theta(n^2)$, since you can basically disregard the constants.

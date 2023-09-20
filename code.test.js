@@ -13,3 +13,5 @@ const testSort =
     });
 
 jsc.assert(testSort);
+
+//console.log(insertionSortReverse([0,1,2,4,3,3,4]))
